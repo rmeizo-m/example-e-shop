@@ -1,0 +1,86 @@
+@import "./constants.pcss";
+
+html {
+  color: #282828;
+  font: var(--baseFont);
+  font-family: var(--baseFontFamily);
+
+  /* removes tap delay, but disables double tap zoom */
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+iframe {
+  max-width: 100%;
+  border: none;
+}
+
+p {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:empty {
+    display: none;
+
+    &:first-child + p {
+      margin-top: 0;
+    }
+
+    &:last-child + p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+}
+
+a {
+  color: var(--baseColor);
+  transition: color 0.2s ease-out;
+
+  &:hover {
+    transition: none;
+    color: var(--activeColor);
+  }
+}
