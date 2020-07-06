@@ -2,11 +2,26 @@
 
 .container {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
   align-items: stretch;
+  background: var(--backgroundColor);
+  padding: 100px 30px;
 }
 
-.content { flex: 1 1 auto; }
+.containerIn {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 6px 6px 4px;
+  background: var(--backgroundLight);
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: stretch;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.content {
+  flex: 1 1 auto;
+}
 .afterContent { flex: 1 1 auto; }

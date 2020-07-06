@@ -6,9 +6,10 @@ import styles from './styles.pcss';
 const cx = classNames.bind(styles);
 
 
-export default function Text({ children, isLegal, isItalic, isSecondary, isLarge, className }) {
+export default function Text({ children, isLegal, isItalic, isSecondary, isLarge, isInline, className }) {
+  const Tag = isInline ? 'span' : 'div';
   return (
-    <div
+    <Tag
       className={cx('component', className, {
         legal: isLegal, secondary: isSecondary, large: isLarge, italic: isItalic,
       })}
@@ -25,5 +26,6 @@ Text.propTypes = {
   isItalic: PropTypes.bool,
   isSecondary: PropTypes.bool,
   isLarge: PropTypes.bool,
+  isInline: PropTypes.bool,
   className: PropTypes.string,
 };

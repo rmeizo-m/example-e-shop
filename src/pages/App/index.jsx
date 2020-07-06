@@ -3,20 +3,24 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { initializeStore } from 'store/App';
+import { initializeStore } from 'store';
 import { getPageView } from 'store/common/selectors';
-import { PageViews, HOME_PAGE } from 'store/common/constants';
-import { withDataConverter, withHMR, withReduxStore } from 'enhancers';
+import { PageViews, CATALOG_PAGE, DETAILS_PAGE } from 'store/common/constants';
+import { withDataConverter, withHMR, withReduxStore, withAdaptivity } from 'enhancers';
+import { breakpoints, setBreakpoint, getBreakpoint } from 'store/common/breakpoint';
 
-import HomePage from '../HomePage';
+import CatalogPage from '../CatalogPage';
+import DetailsPage from '../DetailsPage';
 import dataConverter from './dataConverter';
 
 
 function App({ view }) {
   switch (view) {
-    case HOME_PAGE:
+    case DETAILS_PAGE:
+      return <DetailsPage />;
+    case CATALOG_PAGE:
     default:
-      return <HomePage />;
+      return <CatalogPage />;
   }
 }
 
@@ -32,5 +36,6 @@ export default compose(
   withHMR(module),
   withDataConverter(dataConverter),
   withReduxStore(initializeStore),
+  withAdaptivity({ breakpoints, setBreakpoint, getBreakpoint }),
   connect(mapStateToProps),
 )(App);

@@ -1,0 +1,134 @@
+{
+  "data": {
+    "breadcrumbs": [{
+      "url": "/catalog/men",
+      "title": "Мужская одежда"
+    }, {
+      "url": "/catalog/men-t-shirts",
+      "title": "Футболки"
+    }],
+    "name": "Футболка \"Вечная сода\"",
+    "article": "12345234",
+    "price": {
+      "value": 1990
+    },
+    "slug": "province-black",
+    "filters": {
+      "size": ["l", "m", "s"],
+      "color": ["black"]
+    },
+    "activeQuickFilters": {
+      "color": "black",
+      "size": "m"
+    },
+    "productImages": [
+      "/static/media/t-shirts/soda-1.jpg",
+      "/static/media/t-shirts/soda-2.jpg",
+      "/static/media/t-shirts/soda-3.jpg",
+      "/static/media/t-shirts/soda-4.jpg"
+    ],
+    "quickFilters": [
+      {
+        "slug": "size",
+        "name": "Размер",
+        "values": [
+          {
+            "slug": "xsmall",
+            "value": "xs",
+            "notAvailable": true
+          }, {
+            "slug": "small",
+            "value": "s"
+          }, {
+            "slug": "medium",
+            "value": "m"
+          }, {
+            "slug": "large",
+            "value": "l"
+          }
+        ]
+      }, {
+        "slug": "color",
+        "name": "Цвет",
+        "values": [
+          {
+            "slug": "black",
+            "value": "#000"
+          }, {
+            "slug": "yellow",
+            "value": "#00aaaa"
+          }, {
+            "slug": "white",
+            "value": "#fff"
+          }
+        ]
+      }
+    ],
+    "characteristics": [
+      {
+        "label": "Цвет",
+        "value": "Серый"
+      }, {
+        "label": "Материал",
+        "value": "Хлопок"
+      }, {
+        "label": "Рост модели",
+        "value": "188 см"
+      }, {
+        "label": "Размер на модели",
+        "value": "M"
+      }
+    ],
+    "extras": [
+      {
+        "type": "pdf",
+        "name": "Руководство по стирке и уходу (pdf)",
+        "url": "/static/wash-recomendations"
+      }
+    ]
+
+  },
+  "common": {
+    "view": "DetailsPage",
+    "navigation": {
+      "sections": [
+        {
+          "slug": "men",
+          "name": "Мужчинам",
+          "url": "/catalog/men"
+        }, {
+          "slug": "women",
+          "name": "Женщинам",
+          "url": "/catalog/women"
+        }, {
+          "slug": "discount",
+          "name": "Аутлет",
+          "url": "/catalog/outlet"
+        }, {
+          "slug": "contacts",
+          "name": "Контакты",
+          "url": "/contacts"
+        }, {
+          "slug": "about",
+          "name": "О бренде",
+          "url": "/about"
+        }
+      ],
+      "core": [{
+        "slug": "search",
+        "name": "Поиск"
+      }, {
+        "slug": "lk",
+        "name": "Личный кабинет"
+      }, {
+        "slug": "fav",
+        "name": "Избранное"
+      }, {
+        "slug": "cart",
+        "name": "Корзина"
+      }]
+    }
+  }
+}
+
+

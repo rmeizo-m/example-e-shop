@@ -1,14 +1,51 @@
 import React from 'react';
-import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import styles from './styles.pcss';
-const cx = classNames.bind(styles);
+import {
+  isScreenBelow1400,
+  isScreenBelow800
+} from 'store/common/breakpoint/selectors';
+import { ContentIndent } from 'components';
+import { HeaderLayout, Flex, SectionNavList, CoreNavList, NavItem, Logo } from './components';
 
 
-export default function Header() {
+function Header({ isDesktop, isMobile, className }) {
   return (
-    <div className={cx('header')}>
-      Garage
-    </div>
+    <HeaderLayout className={className}>
+      <ContentIndent>
+        <Flex>
+          { isDesktop ? (
+            <SectionNavList>
+              {({ slug, name, url }) => (
+                <NavItem href={url} key={slug}>{name}</NavItem>
+              )}
+            </SectionNavList>
+          ) : null}
+          <Logo />
+          { !isMobile ? (
+            <CoreNavList>
+              {({ slug, name }) => (
+                <NavItem type={slug} key={slug}>{name}</NavItem>
+              )}
+            </CoreNavList>
+          ) : null}
+        </Flex>
+      </ContentIndent>
+    </HeaderLayout>
   );
 }
+
+Header.propTypes = {
+  isDesktop: PropTypes.bool,
+  isMobile: PropTypes.bool,
+  className: PropTypes.string,
+};
+
+
+const mapStateToProps = state => ({
+  isMobile: isScreenBelow800(state),
+  isDesktop: !isScreenBelow1400(state),
+});
+
+export default connect(mapStateToProps)(Header);

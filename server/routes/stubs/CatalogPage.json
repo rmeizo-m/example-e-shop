@@ -1,0 +1,189 @@
+{
+  "data": {
+    "heading": "Мужская одежда",
+    "filters": {
+      "activeSlug": "t-shirts",
+      "list": [
+        {
+          "name": "Футболки",
+          "slug": "t-shirts"
+        }, {
+          "name": "Толстовки",
+          "slug": "hoodies"
+        }, {
+          "name": "Спортивные штаны",
+          "slug": "sporty-pants"
+        }, {
+          "name": "Рюкзаки",
+          "slug": "backpacks"
+        }, {
+          "name": "Аксессуары",
+          "slug": "accessories"
+        }
+      ]
+    },
+    "quickFilters": [
+      {
+        "slug": "size",
+        "name": "Размер"
+      }, {
+        "slug": "color",
+        "name": "Цвет"
+      }
+    ],
+    "products": [
+      {
+        "slug": "province-black",
+        "productUrl": "/details/vechnaya-soda",
+        "imageUrl": "/static/media/t-shirts/soda-1.jpg",
+        "name": "Футболка \"Вечная сода\"",
+        "price": {
+          "value": 2490
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["black"]
+        }
+      }, {
+        "slug": "v-uzhase",
+        "productUrl": "/details/futbolka-v-uzhase",
+        "imageUrl": "/static/media/t-shirts/85qm1qjjd71_220x0.jpg",
+        "name": "Футболка \"В ужасе\"",
+        "price": {
+          "value": 1690
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white"]
+        }
+      }, {
+        "slug": "kot",
+        "productUrl": "/details/futbolka-kot",
+        "imageUrl": "/static/media/t-shirts/ausurxfjd68_220x0.jpg",
+        "name": "Футболка \"Кот\"",
+        "price": {
+          "value": 990
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "ustal",
+        "productUrl": "/details/futbolka-ustal",
+        "imageUrl": "/static/media/t-shirts/gldjhn5j0cc_220x0.jpg",
+        "name": "Футболка \"Устал\"",
+        "price": {
+          "value": 990
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "pepe",
+        "productUrl": "/details/futbolka-pepe",
+        "imageUrl": "/static/media/t-shirts/iok6iudj36a_220x0.jpg",
+        "name": "Футболка \"Pepe\"",
+        "price": {
+          "value": 1890
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "doomer-dumer",
+        "productUrl": "/details/futbolka-doomer-dumer",
+        "imageUrl": "/static/media/t-shirts/kwph6xij849_220x0.jpg",
+        "name": "Футболка \"Doomer | Думер\"",
+        "price": {
+          "value": 850
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "ispanec",
+        "productUrl": "/details/futbolka-ispanec",
+        "imageUrl": "/static/media/t-shirts/wofa0tojb6a_220x0.jpg",
+        "name": "Футболка \"Смеющийся испанец\"",
+        "price": {
+          "value": 1990
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "u-menya-vse-okay",
+        "productUrl": "/details/futbolka-u-menya-vse-okay",
+        "imageUrl": "/static/media/t-shirts/tn35nyhj1f4_220x0.jpg",
+        "name": "Футболка \"У меня всё окей\"",
+        "price": {
+          "value": 1200
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }, {
+        "slug": "biznesman",
+        "productUrl": "/details/futbolka-biznesman",
+        "imageUrl": "/static/media/t-shirts/dr53otuj58f_220x0.jpg",
+        "name": "Футболка \"Бизнесмен\"",
+        "price": {
+          "value": 1890
+        },
+        "filters": {
+          "size": ["l", "m", "s"],
+          "color": ["white", "black"]
+        }
+      }
+    ]
+  },
+  "common": {
+    "view": "CatalogPage",
+    "navigation": {
+      "sections": [
+        {
+          "slug": "men",
+          "name": "Мужчинам",
+          "url": "/catalog/men"
+        }, {
+          "slug": "women",
+          "name": "Женщинам",
+          "url": "/catalog/women"
+        }, {
+          "slug": "discount",
+          "name": "Аутлет",
+          "url": "/catalog/outlet"
+        }, {
+          "slug": "contacts",
+          "name": "Контакты",
+          "url": "/contacts"
+        }, {
+          "slug": "about",
+          "name": "О бренде",
+          "url": "/about"
+        }
+      ],
+      "core": [{
+        "slug": "search",
+        "name": "Поиск"
+      }, {
+        "slug": "lk",
+        "name": "Личный кабинет"
+      }, {
+        "slug": "fav",
+        "name": "Избранное"
+      }, {
+        "slug": "cart",
+        "name": "Корзина"
+      }]
+    }
+  }
+}
+
+

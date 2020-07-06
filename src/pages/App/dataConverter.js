@@ -5,5 +5,30 @@ import deepmerge from 'deepmerge';
 
 export default (model) => deepmerge({
   data: { },
-  texts: { },
+  common: { },
+  texts: {
+    common: {
+      nav: {
+        search: 'Поиск',
+        lk: 'Личный кабинет',
+        fav: 'Избранное',
+        cart: 'Корзина',
+      },
+    },
+    catalog: {
+      viewTypes: {
+        model: 'Показать на модели',
+      },
+      sortFilter: {
+        label: 'Сортировать',
+      },
+    },
+    details: {
+      characteristicsTitle: 'Характеристики',
+      extraTitle: 'Будет полезно',
+      actionButtonLabel: 'Добавить в корзину',
+      favButtonLabel: 'В избранное',
+      upsaleProductsHeading: 'Хорошо сочетается',
+    },
+  },
 }, model, { arrayMerge: (_, incoming) => incoming });

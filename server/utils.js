@@ -83,8 +83,10 @@ const composeRequestDecoder = ({ url, slug, getSlug, getUrl, getQuery, getBody, 
 
 
 const rewritePathMiddleware = (originalPath, overwritePath) => (req, res, next) => {
+  const backupUrl = req.url;
   req.url = req.url.replace(originalPath, overwritePath);
   next();
+  req.url = backupUrl;
 };
 
 

@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV !== 'development'; // either production or server
 const isDebug = process.env.DEBUG === 'true';
@@ -174,6 +175,11 @@ module.exports = {
         model: '{{model}}',
       },
       inject: false,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './www', to: './' },
+      ],
     }),
     new webpack.DefinePlugin({
       'process.env': {
