@@ -82,8 +82,12 @@
     "extras": [
       {
         "type": "pdf",
-        "name": "Руководство по стирке и уходу (pdf)",
+        "name": "Руководство по стирке и уходу",
         "url": "/static/wash-recomendations"
+      }, {
+        "type": "pdf",
+        "name": "Условия возврата товара",
+        "url": "/static/return-conditions"
       }
     ]
 

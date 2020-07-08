@@ -1,4 +1,4 @@
-const app = require('./express');
+import app from './express';
 
 app.listen(app.get('port'), () => {
   console.log(`

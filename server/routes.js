@@ -1,3 +1,6 @@
+import cookieParser from 'cookie-parser';
+
+
 /**
  * To use router, insert index.routes.js into your folder returning array of routes in following format:
  *
@@ -80,6 +83,7 @@ module.exports = (app) => {
         requestUrl,
         bodyParser.json(),
         bodyParser.urlencoded({ extended: false }),
+        cookieParser(),
         (req, res, next) => {
           if (condition && !condition(req) || method && method !== req.method) {
             next();

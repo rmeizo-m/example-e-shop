@@ -13,7 +13,7 @@ const cx = classNames.bind(commonStyles);
 function UpsaleProducts({ heading, children, className }) {
   return (
     <div className={cx('component', className)}>
-      <Heading className={cx('marb-m')}>{heading}</Heading>
+      <Heading className={cx('marb-m', 'center')}>{heading}</Heading>
       {children}
     </div>
   );

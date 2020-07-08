@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import {
-  isScreenBelow1400,
-  isScreenBelow800
-} from 'store/common/breakpoint/selectors';
-import { ContentIndent } from 'components';
-import { HeaderLayout, Flex, SectionNavList, CoreNavList, NavItem, Logo } from './components';
+import { isScreenBelow1400, isScreenBelow800 } from 'store/common/breakpoint/selectors';
+import { Flex } from 'components';
+import { HeaderLayout, SectionNavList, CoreNavList, NavItem, Logo } from './components';
+import ContentIndent from '../ContentIndent';
 
 
 function Header({ isDesktop, isMobile, className }) {

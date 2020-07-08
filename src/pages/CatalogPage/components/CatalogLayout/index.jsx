@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import { ContentIndent } from 'components';
+import { ContentIndent } from 'shared';
 
 import styles from './styles.pcss';
 const cx = classNames.bind(styles);

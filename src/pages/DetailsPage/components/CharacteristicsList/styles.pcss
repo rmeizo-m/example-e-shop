@@ -1,0 +1,11 @@
+.component {
+}
+
+.item {
+  & + & { margin-top: 10px; }
+
+  &::before {
+    content: "•";
+    margin-right: 4px;
+  }
+}

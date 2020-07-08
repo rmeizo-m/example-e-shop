@@ -1,5 +1,5 @@
-import { getAppTexts } from '../../selectors';
+// import { getAppTexts } from '../../selectors';
 
 
-const getCatalogTexts = state => getAppTexts(state).catalog;
+// const getCatalogTexts = state => getAppTexts(state).catalog;
 

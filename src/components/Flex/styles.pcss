@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline { justify-content: flex-start; }
+
+.topAlign { align-items: flex-start; }
+
+.item {
+  & + & { margin-left: 30px; }
+  .doubleSpacing & + & { margin-left: 90px; }
+}

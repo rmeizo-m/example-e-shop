@@ -64,6 +64,6 @@ export default function withAdaptivity({ breakpoints, setBreakpoint, getBreakpoi
     });
 
     return connect(mapStateToProps, mapDispatchToProps)(ResizeListener);
-  }
+  };
 }
 

@@ -7,7 +7,7 @@ import axios, { CancelToken } from 'axios';
  * @returns {AxiosPromise}
  */
 export const axiosBaseRequest = ({
-  method = 'GET', url, responseType = 'json', withCredentials = true, then = (r => r.data), timeout = 60000, ...options
+  method = 'GET', url, responseType = 'json', withCredentials = true, timeout = 60000, ...options
 }) => {
   const source = CancelToken.source();
   if (timeout) {
@@ -23,5 +23,5 @@ export const axiosBaseRequest = ({
     withCredentials,
     ...options,
     cancelToken: source.token,
-  }).then(then);
+  });
 };
