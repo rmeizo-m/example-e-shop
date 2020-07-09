@@ -28,4 +28,4 @@ const mapStateToProps = state => ({
   isMobile: isScreenBelow800(state),
 });
 
-export default connect(mapStateToProps)(ContentIndent);
+export default connect(mapStateToProps, {})(ContentIndent);

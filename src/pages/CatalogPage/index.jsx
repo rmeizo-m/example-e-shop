@@ -3,8 +3,7 @@ import classNames from 'classnames/bind';
 
 import commonStyles from 'styles/common.pcss';
 import { PageLayout } from 'shared';
-import { Flex } from 'shared/Header/components';
-import { Price } from 'components';
+import { Flex, Price } from 'components';
 import { CatalogLayout, CatalogFilters, CatalogHeading, CatalogQuickFilters, CatalogViewType,
   ProductList, ProductImage, ProductTitle } from './components';
 

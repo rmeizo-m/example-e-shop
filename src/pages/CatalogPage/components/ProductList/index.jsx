@@ -13,7 +13,7 @@ function ProductList({ list, children, className }) {
   return (
     <div className={cx('component', className)}>
       {list.map((item) => (
-        <div className={cx('item')}>
+        <div className={cx('item')} key={item.name}>
           {children(item)}
         </div>
       ))}
@@ -26,7 +26,9 @@ ProductList.propTypes = {
     slug: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    price: PropTypes.number,
+    price: PropTypes.shape({
+      value: PropTypes.number,
+    }),
     filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)),
   })),
   children: PropTypes.func,
