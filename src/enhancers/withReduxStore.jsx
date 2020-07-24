@@ -20,7 +20,6 @@ export default function withReduxStore(initializeStore) {
         store.dispatch(populateStore(props));
       });
 
-      React.useEffect(() => { });
       return (
         <Provider store={store}>
           <WrappedComponent />

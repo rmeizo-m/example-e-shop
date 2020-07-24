@@ -182,9 +182,8 @@ module.exports = {
       ],
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: isProduction && !isDebug ? "'production'" : "'development'",
-      },
+      'process.env.NODE_ENV': JSON.stringify(isProduction && !isDebug ? 'production' : 'development'),
+      'typeof window': JSON.stringify('object'),
     }),
     ...(isDebug ? [
       new Visualizer({
