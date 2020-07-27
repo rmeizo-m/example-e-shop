@@ -93,7 +93,6 @@
 
   },
   "common": {
-    "view": "DetailsPage",
     "navigation": {
       "sections": [
         {

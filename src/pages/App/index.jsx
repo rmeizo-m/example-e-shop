@@ -1,41 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { compose } from 'redux';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { initializeStore } from 'store';
-import { getPageView } from 'store/common/selectors';
-import { PageViews, CATALOG_PAGE, DETAILS_PAGE } from 'store/common/constants';
-import { withDataConverter, withHMR, withReduxStore, withAdaptivity } from 'enhancers';
 import { breakpoints, setBreakpoint, getBreakpoint } from 'store/common/breakpoint';
+import { withDataConverter, withHMR, withReduxStore, withAdaptivity, withReactRouter } from 'enhancers';
+import { CATALOG_URL, DETAILS_URL } from 'requests/constants';
 
 import CatalogPage from '../CatalogPage';
 import DetailsPage from '../DetailsPage';
 import dataConverter from './dataConverter';
 
 
-function App({ view }) {
-  switch (view) {
-    case DETAILS_PAGE:
-      return <DetailsPage />;
-    case CATALOG_PAGE:
-    default:
-      return <CatalogPage />;
-  }
+const Page404 = () => (
+  <h1>404 Not Found</h1>
+);
+
+const Page401 = () => (
+  <h1>401 Unauthorized</h1>
+);
+
+const AuthorizedRouteLayout = ({ renderUnauthorized = Page401, isAuthorized, ...props }) => {
+  if (!isAuthorized) return renderUnauthorized();
+  return (
+    <Route {...props} />
+  );
+};
+
+
+const mapStateToProps = () => ({
+  isAuthorized: true,
+});
+
+const AuthorizedRoute = connect(mapStateToProps)(AuthorizedRouteLayout);
+
+function App() {
+  return (
+    <Switch>
+      <Route path={DETAILS_URL} component={DetailsPage} />
+      <Route path={CATALOG_URL} component={CatalogPage} />
+      <AuthorizedRoute path="/lk/test" renderUnauthorized={() => 'Please login'}>
+        Welcome, Ivan
+      </AuthorizedRoute>
+      <Route component={Page404} />
+    </Switch>
+  );
 }
 
 App.propTypes = {
-  view: PropTypes.oneOf(PageViews),
 };
-
-const mapStateToProps = state => ({
-  view: getPageView(state),
-});
 
 export default compose(
   withHMR(module),
   withDataConverter(dataConverter),
   withReduxStore(initializeStore),
+  withReactRouter(),
   withAdaptivity({ breakpoints, setBreakpoint, getBreakpoint }),
-  connect(mapStateToProps),
 )(App);

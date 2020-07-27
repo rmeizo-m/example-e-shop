@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
+
 import { Text } from 'components';
 
 
 export default function ProductTitle({ children, href, className }) {
   return (
-    <a href={href} className={className}>
+    <Link to={href} className={className}>
       <Text>{children}</Text>
-    </a>
+    </Link>
   );
 }
 

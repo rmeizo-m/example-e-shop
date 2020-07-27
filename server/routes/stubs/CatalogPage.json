@@ -144,7 +144,6 @@
     ]
   },
   "common": {
-    "view": "CatalogPage",
     "navigation": {
       "sections": [
         {
