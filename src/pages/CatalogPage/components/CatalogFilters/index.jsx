@@ -12,6 +12,7 @@ function CatalogFilters({ list, className }) {
       {list.map(({ name, slug, isActive }) => (
         <FilterLink
           key={slug}
+          href={`/catalog/${slug}/`}
           {...{ slug, isActive }}
         >
           {name}
